@@ -1,174 +1,196 @@
-/* Base CSS Setup */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* Light background color */
+/* Reset some defaults */
+* {
   margin: 0;
   padding: 0;
-  color: #333;
+  box-sizing: border-box;
+}
+
+/* Font & body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9f9;
+  color: #1c1c1e;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1f7a54;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Header */
 .header {
-  background-color: #1e2a34; /* Dark background for header */
-  color: #ffffff;
+  background-color: #0c1d1d;
+  color: #fff;
   padding: 20px 0;
-  text-align: center;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header .logo {
-  width: 180px;
+  height: 50px;
 }
 
 .header nav ul {
+  display: flex;
   list-style: none;
-  padding: 0;
 }
 
 .header nav ul li {
-  display: inline;
-  margin-right: 25px;
+  margin-left: 20px;
 }
 
 .header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 .header nav ul li a:hover {
-  color: #00aaff; /* Accent color */
+  background-color: #1f7a54;
 }
 
-/* Hero Section */
-.hero {
-  background-image: url('images/hero.jpg');
-  background-size: cover;
-  padding: 120px 0;
+/* Banner / Hero section */
+.page-banner {
+  background: linear-gradient(135deg, #0f2e2e, #1f7a54);
+  color: white;
   text-align: center;
-  color: #ffffff;
-  background-position: center;
+  padding: 60px 20px;
+  margin-bottom: 30px;
 }
 
-.hero h1 {
-  font-size: 3.5em;
-  font-weight: bold;
+.page-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.cta-button {
-  background-color: #00aaff; /* Accent color */
-  padding: 12px 30px;
-  border: none;
-  font-size: 1.4em;
-  cursor: pointer;
-  color: #ffffff;
-  border-radius: 5px;
-}
-
-.cta-button:hover {
-  background-color: #007acc; /* Darker blue on hover */
-}
-
-/* Property Listings */
+/* Property Cards */
 .property-listings {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
 }
 
 .property {
-  width: 30%;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.property:hover {
+  transform: translateY(-5px);
 }
 
 .property img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .property h3 {
-  margin-top: 10px;
-  font-size: 1.5em;
-  color: #333;
+  font-size: 1.2rem;
+  color: #0c1d1d;
+  padding: 15px 15px 5px;
 }
 
 .property p {
-  color: #777;
-  font-size: 1.1em;
-}
-
-.property:hover {
-  transform: scale(1.05);
+  padding: 0 15px 15px;
+  color: #555;
 }
 
 /* Footer */
 footer {
-  background-color: #1e2a34; /* Dark background for footer */
-  color: #ffffff;
+  background-color: #0c1d1d;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
+  margin-top: 30px;
 }
 
-/* Buttons and Links */
-button, .cta-button {
-  font-size: 1.2em;
-  padding: 12px 25px;
-  border-radius: 8px;
+/* Contact form styling */
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  background-color: #1f7a54;
+  color: white;
+  padding: 12px 20px;
   border: none;
-  color: #fff;
-  background-color: #00aaff; /* Main color */
+  border-radius: 6px;
   cursor: pointer;
 }
 
-button:hover, .cta-button:hover {
-  background-color: #007acc; /* Darker shade */
+.contact-form button:hover {
+  background-color: #155a3b;
 }
 
-/* Other Sections */
-.page-banner {
-  background-color: #4caf50; /* Green banner */
-  color: #fff;
-  padding: 60px 0;
+/* Careers Page */
+.job-posting {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1f7a54;
+}
+
+.job-posting h4 {
+  margin-bottom: 8px;
+  color: #0c1d1d;
+}
+
+/* Team Grid */
+.team-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.team-member {
+  flex: 1 1 30%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.page-banner h2 {
-  font-size: 2.5em;
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
-.page-banner p {
-  font-size: 1.2em;
-}
-
-/* Card Section (for testimonials, benefits, etc.) */
-.card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card h3 {
-  font-size: 1.7em;
-  color: #333;
-}
-
-.card p {
-  font-size: 1.1em;
-  color: #777;
+.team-member h4 {
+  color: #0c1d1d;
+  margin-bottom: 5px;
 }
