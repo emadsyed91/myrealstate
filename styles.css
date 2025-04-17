@@ -1,1 +1,113 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+header .logo {
+  max-width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('images/hero.jpg') center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.page-banner {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f4f4f4;
+}
+
+.property-listings .property {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.property-listings img {
+  width: 100%;
+  height: auto;
+}
+
+.property-listings h3 {
+  font-size: 1.2em;
+}
+
+.property-listings p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.careers-info, .contact-info, .about-info, .blog-posts {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
