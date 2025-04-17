@@ -1,9 +1,10 @@
-/* Base CSS setup */
+/* Base CSS Setup */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa; /* Light background color */
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 .container {
@@ -11,15 +12,16 @@ body {
   margin: 0 auto;
 }
 
+/* Header */
 .header {
-  background-color: #2d2d2d;
+  background-color: #1e2a34; /* Dark background for header */
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
 }
 
 .header .logo {
-  width: 150px;
+  width: 180px;
 }
 
 .header nav ul {
@@ -29,39 +31,54 @@ body {
 
 .header nav ul li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .header nav ul li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
+.header nav ul li a:hover {
+  color: #00aaff; /* Accent color */
+}
+
+/* Hero Section */
 .hero {
   background-image: url('images/hero.jpg');
   background-size: cover;
-  padding: 100px 0;
+  padding: 120px 0;
   text-align: center;
   color: #ffffff;
+  background-position: center;
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+  font-weight: bold;
 }
 
 .cta-button {
-  background-color: #00aaff;
-  padding: 10px 20px;
+  background-color: #00aaff; /* Accent color */
+  padding: 12px 30px;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
   cursor: pointer;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
+.cta-button:hover {
+  background-color: #007acc; /* Darker blue on hover */
+}
+
+/* Property Listings */
 .property-listings {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .property {
@@ -69,21 +86,89 @@ body {
   background-color: white;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .property img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .property h3 {
   margin-top: 10px;
   font-size: 1.5em;
+  color: #333;
 }
 
+.property p {
+  color: #777;
+  font-size: 1.1em;
+}
+
+.property:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-  background-color: #2d2d2d;
+  background-color: #1e2a34; /* Dark background for footer */
   color: #ffffff;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
+}
+
+/* Buttons and Links */
+button, .cta-button {
+  font-size: 1.2em;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #00aaff; /* Main color */
+  cursor: pointer;
+}
+
+button:hover, .cta-button:hover {
+  background-color: #007acc; /* Darker shade */
+}
+
+/* Other Sections */
+.page-banner {
+  background-color: #4caf50; /* Green banner */
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-banner h2 {
+  font-size: 2.5em;
+}
+
+.page-banner p {
+  font-size: 1.2em;
+}
+
+/* Card Section (for testimonials, benefits, etc.) */
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  font-size: 1.7em;
+  color: #333;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #777;
 }
