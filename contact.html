@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - CS Real Estate</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CS Project Real Estate Company</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Header Section -->
   <header class="header">
     <div class="container">
-      <img src="images/logo.jpg" alt="Espace Logo" class="logo">
+      <img src="images/logo.jpg" alt="CS Project Real Estate Logo" class="logo">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -20,33 +21,40 @@
           <li><a href="careers.html">Careers</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<section class="page-banner">
-  <h2>Contact Us</h2>
-  <p>We’d love to hear from you! Reach out with any questions or inquiries.</p>
-</section>
-<section class="container">
-  <h3>Get in Touch</h3>
-  <p><strong>Phone:</strong> +971 X XXX XXXX</p>
-  <p><strong>Email:</strong> info@csrealestate.ae</p>
-  <p><strong>Address:</strong> Univresity of Dubai, Dubai, UAE</p>
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to contact us. We are here to help you!</p>
+  </section>
 
-  <h3>Inquiry Form</h3>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <section class="contact-form container">
+    <h3>Get in Touch</h3>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 CS Real Estate</p>
+      <p>&copy; 2025 CS Project Real Estate Company</p>
     </div>
   </footer>
 
